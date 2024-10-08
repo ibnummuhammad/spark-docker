@@ -23,4 +23,7 @@ RUN set -ex; \
     apt-get install -y python3 python3-pip; \
     rm -rf /var/lib/apt/lists/*
 
+RUN pip install requests==2.32.3
+RUN pip install pandas==2.2.3
+
 USER spark
