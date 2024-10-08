@@ -25,5 +25,6 @@ RUN set -ex; \
 
 RUN pip install requests==2.32.3
 RUN pip install pandas==2.2.3
+RUN pip install redshift-connector==2.1.3
 
 USER spark
