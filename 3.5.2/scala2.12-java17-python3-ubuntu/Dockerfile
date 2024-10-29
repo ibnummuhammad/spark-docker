@@ -23,6 +23,10 @@ RUN set -ex; \
     apt-get install -y python3 python3-pip; \
     rm -rf /var/lib/apt/lists/*
 
+RUN mkdir -p /opt/ingestion_pipeline_library
+COPY apipygest-1.0.0-py3-none-any.whl /opt/ingestion_pipeline_library
+
+RUN pip install /opt/ingestion_pipeline_library/apipygest-1.0.0-py3-none-any.whl
 RUN pip install requests==2.32.3
 RUN pip install pandas==2.2.3
 RUN pip install redshift-connector==2.1.3
